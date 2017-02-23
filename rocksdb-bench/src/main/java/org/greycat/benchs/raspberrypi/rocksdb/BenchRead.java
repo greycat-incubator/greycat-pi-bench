@@ -117,6 +117,12 @@ public class BenchRead {
                 }
 
                 System.out.println("Average duration: " + sum / nbIter + " ms");
+                graph.disconnect(new Callback<Boolean>() {
+                    @Override
+                    public void on(Boolean result) {
+                        System.out.println("Graph has been shutdown");
+                    }
+                });
             }
         });
     }

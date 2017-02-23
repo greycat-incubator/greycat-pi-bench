@@ -33,12 +33,35 @@ Table with final result (in ms)
 
    | MacBook Pro | Raspberry Pi
 ---|-------------|-------------
- **Full Memory** | 1378 | X 
- **RocksDB** | 8974 | 139625 
+ **Full Memory** | 1378 | X
+ **RocksDB** | 8974 | 139625
 
 Table with nodes/seconds (* 1000)
 
    | MacBook Pro | Raspberry Pi
 ---|-------------|-------------
- **Full Memory** | 2177 | X 
- **RocksDB** | 334 | 21,5 
+ **Full Memory** | 2177 | X
+ **RocksDB** | 334 | 21,5
+
+
+
+### Bench Write
+
+**What we do:** We created a model with 2500 elements (this small number is needed to allow the execution on Raspberry Pi, that has only 1GB of memory). There is two versions of the bench:
+
+- Full memory one: the model element are created, store in memory but never persist
+- RocksDB: each time a node is created, we persist it in a RocksDB data base.
+
+Table with "pure" results (in ms)
+
+| MacBook Pro | Raspberry Pi
+---|-------------|-------------
+**Full Memory** | 30 | 522
+**RocksDB** | 90 | 1183
+
+Table with nodes/seconds (* 1000)
+
+   | MacBook Pro | Raspberry Pi
+---|-------------|-------------
+ **Full Memory** | 83 | 4,8
+ **RocksDB** | 28 | 2,1
