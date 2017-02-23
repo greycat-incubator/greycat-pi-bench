@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>raspberrypi</artifactId>
+        <groupId>org.greycat.benchs</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.greycat.benchs.raspberrypi</groupId>
+    <artifactId>rocksdb</artifactId>
+    <name> RocksDB Bench</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.datathings</groupId>
+            <artifactId>greycat-rocksdb</artifactId>
+            <version>${greycat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.datathings</groupId>
+            <artifactId>greycat-rocksdb</artifactId>
+            <version>${greycat.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.greycat.benchs.raspberrypi.rocksdb.Runner</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>assembly</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+
+</project>

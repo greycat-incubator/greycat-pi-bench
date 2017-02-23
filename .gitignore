@@ -1,0 +1,9 @@
+# Intellij
+.idea
+*.iml
+
+# Data
+bench1DB
+
+# Maven
+target
