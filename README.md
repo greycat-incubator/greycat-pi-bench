@@ -29,14 +29,16 @@ GreyCat on Raspberry Pi - Benchs
 - Full Memory one: we load all the data in memory, and resolve them. (As the Raspberry Pi has not enough memory to have all the graph in memory, we didn't make this benchmark)
 - RocksDB: we resolve one by one the elements, with in memory at most 2500 nodes. So In this benchmark the GC is also used to remove old data when we resolve new nodes.  
 
-Table with final result
+Table with final result (in ms)
 
-| | MacBook Pro | Raspberry Pi |
-| Full Memory | 1378 | X |
-| RocksDB | 8974 | 139625 |
+   | MacBook Pro | Raspberry Pi
+---|-------------|-------------
+ **Full Memory** | 1378 | X 
+ **RocksDB** | 8974 | 139625 
 
-Table with nodes/seconds
+Table with nodes/seconds (* 1000)
 
-| | MacBook Pro | Raspberry Pi |
-| Full Memory | 1378 | 21486 |
-| RocksDB | 8974 | 139625 |
+   | MacBook Pro | Raspberry Pi
+---|-------------|-------------
+ **Full Memory** | 2177 | X 
+ **RocksDB** | 334 | 21,5 
