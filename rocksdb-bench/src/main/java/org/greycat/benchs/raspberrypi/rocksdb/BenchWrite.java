@@ -69,6 +69,13 @@ class BenchWrite  {
     }
 
     public void run(final int warmupIter, final int nbIter, final boolean inFullMemory) {
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            @Override
+            public void run() {
+                end();
+            }
+        });
+
         final GraphBuilder builder = new GraphBuilder()
                 .withMemorySize(MEMORY_SIZE);
 
