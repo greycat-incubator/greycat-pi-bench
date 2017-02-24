@@ -22,10 +22,10 @@ public class Runner {
         BenchWrite benchWrite = new BenchWrite();
 
         //Full memory
-        benchWrite.run(10,100,true);
+//        benchWrite.run(10,100,true);
 
         // Nodes are directly persists after their creation
-//        benchWrite.run(10,100,false);
+        benchWrite.run(10,100,false);
 
     }
 }
