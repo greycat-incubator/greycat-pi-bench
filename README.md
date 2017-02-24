@@ -54,7 +54,7 @@ Table with nodes/seconds (* 1000)
 
 Table with "pure" results (in ms)
 
-| MacBook Pro | Raspberry Pi
+   | MacBook Pro | Raspberry Pi
 ---|-------------|-------------
 **Full Memory** | 525 | 11158
 **RocksDB** | XX | XX
